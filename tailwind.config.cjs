@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         black: '#18181e',
+        white: '#e4e4ff',
       },
       width: {
         'sqrt-2': `${Math.sqrt(2) * 100}%`,

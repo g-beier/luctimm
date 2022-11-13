@@ -1,6 +1,8 @@
 ---
-import '../global.css';
 import Header from '../components/Header.astro';
+import Logo from '../components/Logo.astro';
+import '../global.css';
+import MenuIcon from '../icons/MenuIcon.astro';
 ---
 
 <html lang="en">
@@ -9,10 +11,12 @@ import Header from '../components/Header.astro';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>CV - Lucas Timm</title>
+    <title>Lucas Timm</title>
   </head>
-  <body class="min-h-screen text-white bg-black">
+  <body class="text-black bg-white dark:text-white dark:bg-black min-h-screen">
     <Header />
-    <slot />
+    <main class="container mx-auto px-4">
+      <slot />
+    </main>
   </body>
 </html>
