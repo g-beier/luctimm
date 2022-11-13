@@ -1,5 +1,6 @@
 ---
-import "../global.css";
+import '../global.css';
+import Logo from '../components/Logo.astro';
 ---
 
 <html lang="en">
@@ -13,7 +14,42 @@ import "../global.css";
 
     <title>Lucas Timm</title>
   </head>
-  <body>
-    <slot />
+  <body class="min-h-screen text-white bg-black">
+    <div
+      class="flex flex-col flex-nowrap items-center justify-center gap-6 min-h-screen"
+    >
+      <Logo scale="80" />
+      <nav>
+        <ul class="flex flex-row flex-nowrap text-sm items-center sm:text-base">
+          <li class="pl-2 sm:pl-4">
+            <a
+              href="/"
+              class="hover:text-sky-200 active:text-sky-400 transition-color duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-opacity-25 focus-visible:ring-offset-black"
+            >
+              Home
+            </a>
+          </li>
+          <li class="pl-2 sm:pl-4">
+            <a
+              href="/curriculum"
+              class="hover:text-sky-200 active:text-sky-400 transition-color duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-opacity-25 focus-visible:ring-offset-black"
+            >
+              Curriculum
+            </a>
+          </li>
+          <li class="pl-2 sm:pl-4">
+            <a
+              href="/blog"
+              class="hover:text-sky-200 active:text-sky-400 transition-color duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-opacity-25 focus-visible:ring-offset-black"
+            >
+              Blog
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="pt-16 container mx-auto">
+      <slot />
+    </div>
   </body>
 </html>

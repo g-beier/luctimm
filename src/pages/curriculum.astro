@@ -1,10 +1,16 @@
 ---
-import CurriculumLayout from "../layouts/CurriculumLayout.astro";
+import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import CurriculumLayout from '../layouts/CurriculumLayout.astro';
+import Ribbon from '../components/Ribbon.astro';
 ---
 
 <CurriculumLayout>
-  <h2>Curriculum Vitae</h2>
-  <section>
-    <h3>Experience</h3>
-  </section>
+  <Header />
+  <div class="mt-16 container mx-auto">
+    <Card>
+      <Ribbon href="#">text</Ribbon>
+      Texto genérico aqui hahaha
+    </Card>
+  </div>
 </CurriculumLayout>
