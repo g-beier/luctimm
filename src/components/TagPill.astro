@@ -1,0 +1,10 @@
+---
+const { tagName } = Astro.props;
+---
+
+<a
+  class="inline-block rounded-full bg-sky-800 px-4 py-0.5 font-semibold text-white transition-all duration-100 hover:-translate-y-1 hover:bg-sky-700 focus:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-500 focus:ring-opacity-40"
+  href={`/tags/${tagName}`}
+>
+  {tagName}
+</a>

@@ -1,12 +1,13 @@
 ---
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
-import BlogLayout from '../../layouts/BlogLayout.astro';
+import TagList from '../../components/TagList.astro';
 const allPosts = await Astro.glob('./*.md');
 ---
 
-<BlogLayout>
+<BaseLayout pageTitle="Blog | Lucas Timm">
   <h2>Blog Posts</h2>
-  <ul class="mx-auto max-w-2xl grid gap-2 grid-cols-2">
+  <ul class="grid gap-2 grid-cols-2">
     {
       allPosts
         .sort(
@@ -23,4 +24,5 @@ const allPosts = await Astro.glob('./*.md');
         ))
     }
   </ul>
-</BlogLayout>
+  <TagList />
+</BaseLayout>

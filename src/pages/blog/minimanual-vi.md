@@ -4,7 +4,7 @@ title: 'Mini-manual de Vi'
 author: 'Lucas Timm'
 pubDate: 2007-01-21
 description: 'Some first impressions on my first few days working for IBM'
-tags: ['vi', 'techlife', 'tutorial']
+tags: ['vi', 'techlife', 'tutorial', 'unix']
 ---
 
 Hi folks!

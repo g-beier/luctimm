@@ -1,6 +1,7 @@
 ---
 import '../global.css';
 import Header from '../components/Header.astro';
+const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -12,7 +13,7 @@ import Header from '../components/Header.astro';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>Lucas Timm</title>
+    <title>{pageTitle}</title>
   </head>
   <body class="text-black bg-white dark:text-white dark:bg-black min-h-screen">
     <Header />
