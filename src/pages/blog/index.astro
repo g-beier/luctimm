@@ -1,7 +1,26 @@
 ---
-import LandingLayout from '../../layouts/LandingLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+const allPosts = await Astro.glob('./*.md');
 ---
 
-<LandingLayout>
-  <p>Text here</p>
-</LandingLayout>
+<BlogLayout>
+  <h2>Blog Posts</h2>
+  <ul class="mx-auto max-w-2xl grid gap-2 grid-cols-2">
+    {
+      allPosts
+        .sort(
+          (a, b) =>
+            (new Date(b.frontmatter.pubDate) as any) -
+            (new Date(a.frontmatter.pubDate) as any)
+        )
+        .map((post) => (
+          <BlogPost
+            title={post.frontmatter.title}
+            url={post.url}
+            date={post.frontmatter.pubDate}
+          />
+        ))
+    }
+  </ul>
+</BlogLayout>

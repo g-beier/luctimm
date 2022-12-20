@@ -1,0 +1,28 @@
+---
+const props = Astro.props;
+const months = [
+  '',
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+---
+
+<li class="flex items-center gap-2">
+  <span class="text-3xl font-extrabold text-slate-700">
+    {props.date.slice(8, 10)}
+  </span>
+  <span class="font-bold text-slate-700">
+    {months.at(+props.date.slice(5, 7))}
+  </span>
+  <a href={props.url}>{props.title}</a>
+</li>
