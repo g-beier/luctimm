@@ -7,7 +7,7 @@ const allPosts = await Astro.glob('./*.md');
 
 <BaseLayout pageTitle="Blog | Lucas Timm">
   <h2>Blog Posts</h2>
-  <ul class="grid gap-2 grid-cols-2">
+  <ul class="grid gap-2 sm:grid-cols-2">
     {
       allPosts
         .sort(

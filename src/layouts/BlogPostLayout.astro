@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
     <p class="text-sm text-slate-700">{frontmatter.description}</p>
     <p>Published on {frontmatter.pubDate.slice(0, 10)}</p>
     <slot />
-    <div class="flex gap-3 my-3">
+    <div class="flex gap-3 my-3 flex-wrap">
       <h3 class="font-bold text-slate-800">Tags</h3>
       {frontmatter.tags.sort().map((tag: string) => <TagPill tagName={tag} />)}
     </div>

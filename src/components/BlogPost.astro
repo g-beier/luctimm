@@ -18,9 +18,8 @@ const months = [
 ---
 
 <li class="flex items-center gap-4">
-  <span class="text-2xl font-extrabold text-slate-700">
-    {props.date.slice(8, 10)}
-    {months.at(+props.date.slice(5, 7))}
+  <span class="text-2xl font-extrabold text-slate-700 w-max">
+    {props.date.slice(8, 10)}&nbsp;{months.at(+props.date.slice(5, 7))}
   </span>
   <a href={props.url}>{props.title}</a>
 </li>
