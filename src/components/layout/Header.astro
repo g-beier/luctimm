@@ -1,6 +1,6 @@
 ---
 import ThemeToggle from "../ThemeToggle.astro";
-import Search from "../Search.astro";
+// import Search from "../Search.astro";
 import { menuLinks } from "@/site-config";
 
 const url = new URL(Astro.request.url);
@@ -37,24 +37,39 @@ const url = new URL(Astro.request.url);
 	<div class="flex sm:flex-col">
 		<a
 			href="/"
-			class="inline-flex items-center grayscale dark:brightness-150 hover:filter-none sm:relative sm:inline-block dark:hover:filter-none"
+			class="inline-flex items-center grayscale hover:filter-none dark:brightness-150 dark:hover:filter-none sm:relative sm:inline-block"
 			aria-current={url.pathname === "/" ? "page" : false}
 		>
-      <svg viewBox="0 0 451 570" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="me-3 h-10 w-6 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-20 sm:w-12">
-        <title>Logo</title>
-        <path d="M19 522.37L85.6666 560.86V252.94L19 214.45V522.37Z" fill="#070B30"/>
-        <path d="M165.333 124.47V201.45L232 239.94L232 162.96L165.333 124.47Z" fill="#070B30"/>
-        <path d="M298.667 201.45L232 239.94Z" fill="#070B30"/>
-        <path d="M232 239.94V393.92Z" fill="#070B30"/>
-        <path d="M298.667 432.41L298.667 201.45Z" fill="#070B30"/>
-        <path d="M232 393.92L298.667 432.41Z" fill="#070B30"/>
-        <path d="M298.667 201.45L232 239.94V393.92L298.667 432.41L298.667 201.45Z" fill="#070B30"/>
-        <path d="M232 239.94L298.667 201.45L298.667 432.39L365.333 393.9V162.96L432 124.47L432 47.49L232 162.96V239.94Z" fill="#53C68C"/>
-        <path d="M85.6668 560.86L285.667 445.39L285.667 368.41L152.333 445.39L152.333 214.45L85.6668 252.94V560.86Z" fill="#53C68C"/>
-        <path d="M365.333 9L432 47.49L232 162.96L165.333 124.47L365.333 9Z" fill="#1B2050"/>
-        <path d="M85.6666 175.96L19 214.45L85.6668 252.94L152.333 214.45L85.6666 175.96Z" fill="#1B2050"/>
-        <path d="M219 329.92L152.333 368.41V445.39L285.667 368.41L219 329.92Z" fill="#1B2050"/>
-      </svg>
+			<svg
+				viewBox="0 0 451 570"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				aria-hidden="true"
+				class="me-3 h-10 w-6 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-20 sm:w-12"
+			>
+				<title>Logo</title>
+				<path d="M19 522.37L85.6666 560.86V252.94L19 214.45V522.37Z" fill="#070B30"></path>
+				<path d="M165.333 124.47V201.45L232 239.94L232 162.96L165.333 124.47Z" fill="#070B30"
+				></path>
+				<path d="M298.667 201.45L232 239.94Z" fill="#070B30"></path>
+				<path d="M232 239.94V393.92Z" fill="#070B30"></path>
+				<path d="M298.667 432.41L298.667 201.45Z" fill="#070B30"></path>
+				<path d="M232 393.92L298.667 432.41Z" fill="#070B30"></path>
+				<path d="M298.667 201.45L232 239.94V393.92L298.667 432.41L298.667 201.45Z" fill="#070B30"
+				></path>
+				<path
+					d="M232 239.94L298.667 201.45L298.667 432.39L365.333 393.9V162.96L432 124.47L432 47.49L232 162.96V239.94Z"
+					fill="#53C68C"></path>
+				<path
+					d="M85.6668 560.86L285.667 445.39L285.667 368.41L152.333 445.39L152.333 214.45L85.6668 252.94V560.86Z"
+					fill="#53C68C"></path>
+				<path d="M365.333 9L432 47.49L232 162.96L165.333 124.47L365.333 9Z" fill="#1B2050"></path>
+				<path
+					d="M85.6666 175.96L19 214.45L85.6668 252.94L152.333 214.45L85.6666 175.96Z"
+					fill="#1B2050"></path>
+				<path d="M219 329.92L152.333 368.41V445.39L285.667 368.41L219 329.92Z" fill="#1B2050"
+				></path>
+			</svg>
 			<span class="text-xl font-bold sm:text-2xl">Lucas Timm</span>
 		</a>
 		<nav
@@ -76,7 +91,7 @@ const url = new URL(Astro.request.url);
 			}
 		</nav>
 	</div>
-	<Search />
+	<!-- <Search /> -->
 	<ThemeToggle />
 	<button
 		id="toggle-navigation-menu"

@@ -1,0 +1,116 @@
+---
+// import { Image } from "astro:assets";
+
+import PageLayout from "@/layouts/Base";
+
+const meta = {
+	title: "About",
+	description: "I'm Lucas Timm. Where is the sea?",
+};
+
+const cactusTech: Array<{ title: string; desc?: string; href?: string }> = [
+	{
+		title: "Red Hat Enterprise Linux",
+		desc: "Proficiently managing Red Hat Enterprise Linux systems since 2008, ensuring seamless operations and reliability.",
+	},
+	{
+		title: "Networking",
+		desc: "Extensive academic background and advanced expertise in networking, including comprehensive knowledge of the OSI model and a proven track record of optimizing network performance and security.",
+	},
+	{
+		title: "IBM AIX",
+		desc: "Proficient in IBM AIX, with hands-on experience in patch management, troubleshooting, configuring through HACMP and working with high-availability solutions such as TSAM clusters.",
+	},
+	{
+		title: "Shell Script",
+		desc: "Proficient in Bash scripting, harnessing the power of shell scripting to automate tasks, enhance system efficiency, and streamline operations.",
+	},
+	{
+		title: "Automation",
+		desc: "Created many different automations in Ansible, also familiar with Kubernetes and Chef, leveraging these technologies to enhance system efficiency, automate processes, and ensure seamless configuration management.",
+	},
+	{
+		title: "Customer service",
+		desc: "Over 11 years of experience as a Technical Support Engineer, demonstrating exceptional customer service, adept troubleshooting, and effective communication skills to deliver top-notch support and resolve complex issues.",
+	},
+	{
+		title: "Atlasian tools",
+		desc: "Accomplished in Atlassian tools, particularly Jira, adept at utilizing these collaborative platforms to streamline project management, track issues, and enhance team productivity.",
+	},
+	{
+		title: "VMware vSphere/ESXi",
+		desc: "Very experienced with virtualization tools including VMware vSphere, Xen, and Red Hat Virtualization Server, having successfully configured diverse virtual environments and infrastructure setups across enterprises.",
+	},
+	{
+		title: "Log analysis tools",
+		desc: "Seasoned in troubleshooting tools, particularly Splunk, for log analysis and issue resolution, with a comprehensive understanding of similar tools used for in-depth system diagnostics and problem-solving.",
+	},
+];
+---
+
+<PageLayout meta={meta}>
+	<section>
+		<h1 class="title mb-6">About</h1>
+		<p class="mb-4">
+			I embarked on my academic journey in 2006, pursuing a degree in Technology in Computer
+			Networks, which I pursued with dedication until 2010. Although I successfully completed all
+			coursework and earned approvals, administrative challenges delayed my graduation. Undeterred,
+			I resumed my studies in 2019, enrolling in Technology in Analysis and System Developments. I
+			am proud to have graduated in 2022, solidifying my commitment to continuous learning and
+			growth.
+		</p>
+		<p class="mb-4">
+			This academic path has equipped me with a strong foundation in technology and problem-solving
+			skills, which I have applied effectively in my professional endeavors. Here are my some of my
+			job experiences:
+		</p>
+		<ul class="list-inside list-disc">
+			<li>System Reliability Engineer at <strong class="text-accent">IBM</strong>;</li>
+			<li>Technical Support Engineer at <strong class="text-accent">Goldman Sachs</strong>;</li>
+			<li>Technical Support Engineer at <strong class="text-accent">SAP</strong>;</li>
+			<li>
+				Information Technology Technical Lead at <strong class="text-accent">TCS</strong>;
+			</li>
+			<li>
+				Application Management Senior Analyst and, later, System Engineering Advisor at <strong
+					class="text-accent">Dell</strong
+				>;
+			</li>
+			<li>Support Engineer at <strong class="text-accent">e-Core</strong>;</li>
+		</ul>
+	</section>
+
+	<section class="mt-8">
+		<h2 class="title mb-4 text-xl">Skills</h2>
+		<ul class="space-y-4">
+			{
+				cactusTech.map(({ href, title, desc }) => (
+					<li>
+						{href ? (
+							<a
+								href={href}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cactus-link inline-block"
+							>
+								{title}
+							</a>
+						) : (
+							<strong class="cactus-link inline-block font-medium">{title}</strong>
+						)}
+						{desc && ": "}
+						{desc && <p class="inline-block">{desc}</p>}
+					</li>
+				))
+			}
+		</ul>
+	</section>
+	<p class="mt-8">
+		Check my <a
+			class="cactus-link inline-block"
+			href="https://linkedin.com/in/lucastimm"
+			target="_blank"
+			rel="noopener noreferrer">LinkedIn profile</a
+		> if you like me!
+	</p>
+</PageLayout>

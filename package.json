@@ -1,9 +1,10 @@
 {
-	"name": "astro-cactus",
+	"name": "luctimm",
 	"version": "3.2.0",
 	"private": false,
 	"scripts": {
 		"dev": "astro dev",
+		"devh": "astro dev --host",
 		"start": "astro dev",
 		"build": "astro build",
 		"postbuild": "pagefind --source dist",
